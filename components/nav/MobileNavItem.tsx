@@ -19,16 +19,12 @@ const MobileNavItem: FC<NavItemProps> = ({ primary, children, link }) => {
 			>
 				<span
 					className={`font-bold text-4xl tracking-wide ${
-						primary
-							? "text-brand-black dark:text-gray-200"
-							: "text-brand-black/50 dark:text-red-400"
+						primary ? "text-brand-black" : "text-brand-black/50"
 					}  transition-colors duration-200 `}
 				>
 					{children}
 				</span>
-				{primary && (
-					<hr className="w-24 mt-2 border-2 border-brand-black dark:border-gray-300 " />
-				)}
+				{primary && <hr className="w-24 mt-2 border-2 border-brand-black" />}
 			</Link>
 		</li>
 	);

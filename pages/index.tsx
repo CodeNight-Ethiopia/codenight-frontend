@@ -17,7 +17,7 @@ const PageHead = () => (
 const HeroSection = () => (
 	<section className="px-4 py-32 mx-auto max-w-7xl">
 		<div className="w-full mx-auto text-left md:w-11/12 xl:w-8/12 md:text-center">
-			<h1 className="mb-3 text-4xl font-bold text-gray-900 dark:text-white md:text-5xl md:leading-tight md:font-extrabold">
+			<h1 className="mb-3 text-4xl font-bold text-gray-900 md:text-5xl md:leading-tight md:font-extrabold">
 				Community of 🇪🇹 developers to showcase their projects
 			</h1>
 			<p className="mb-6 text-lg text-gray-500 md:text-xl md:leading-normal">

@@ -12,8 +12,6 @@ const NavItem = ({ primary, children, link }: NavItemProps) => {
 		<li>
 			<Link
 				href={link}
-				aria-label="Our product"
-				title="Our product"
 				className={`font-medium tracking-wide ${
 					primary ? "text-brand-black" : "text-gray-700"
 				}  transition-colors duration-200 hover:text-deep-purple-accent-400`}

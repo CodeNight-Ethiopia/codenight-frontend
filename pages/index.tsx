@@ -1,65 +1,7 @@
-import { FC } from "react";
 import Head from "next/head";
 
 import Logo from "@/assets/Logo";
 import Nav from "@/components/nav/Nav";
-
-const posts = [
-	{
-		title: "Boost your conversion rate",
-		href: "#",
-		category: { name: "Article", href: "#" },
-		description:
-			"Lorem ipsum dolor sit amet consectetur adipisicing elit. Architecto accusantium praesentium eius, ut atque fuga culpa, similique sequi cum eos quis dolorum.",
-		date: "Mar 16, 2020",
-		datetime: "2020-03-16",
-		imageUrl:
-			"https://images.unsplash.com/photo-1496128858413-b36217c2ce36?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1679&q=80",
-		readingTime: "6 min",
-		author: {
-			name: "Roel Aufderehar",
-			href: "#",
-			imageUrl:
-				"https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80",
-		},
-	},
-	{
-		title: "How to use search engine optimization to drive sales",
-		href: "#",
-		category: { name: "Video", href: "#" },
-		description:
-			"Lorem ipsum dolor sit amet consectetur adipisicing elit. Velit facilis asperiores porro quaerat doloribus, eveniet dolore. Adipisci tempora aut inventore optio animi., tempore temporibus quo laudantium.",
-		date: "Mar 10, 2020",
-		datetime: "2020-03-10",
-		imageUrl:
-			"https://images.unsplash.com/photo-1547586696-ea22b4d4235d?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1679&q=80",
-		readingTime: "4 min",
-		author: {
-			name: "Brenna Goyette",
-			href: "#",
-			imageUrl:
-				"https://images.unsplash.com/photo-1550525811-e5869dd03032?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80",
-		},
-	},
-	{
-		title: "Improve your customer experience",
-		href: "#",
-		category: { name: "Case Study", href: "#" },
-		description:
-			"Lorem ipsum dolor sit amet consectetur adipisicing elit. Sint harum rerum voluptatem quo recusandae magni placeat saepe molestiae, sed excepturi cumque corporis perferendis hic.",
-		date: "Feb 12, 2020",
-		datetime: "2020-02-12",
-		imageUrl:
-			"https://images.unsplash.com/photo-1492724441997-5dc865305da7?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1679&q=80",
-		readingTime: "11 min",
-		author: {
-			name: "Daniela Metz",
-			href: "#",
-			imageUrl:
-				"https://images.unsplash.com/photo-1487412720507-e7ab37603c6f?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80",
-		},
-	},
-];
 
 const PageHead = () => (
 	<Head>
@@ -91,7 +33,7 @@ const programs = [
 	{
 		name: "Debugging Session - Wednesday",
 		description:
-			"Ask your questions about programming and get answers from experienced developers.",
+			"Ask your questions and get answers from experienced developers.",
 		icon: () => (
 			<svg
 				xmlns="http://www.w3.org/2000/svg"
@@ -191,22 +133,21 @@ const Programs = () => (
 
 const AboutUs = () => (
 	<div className="bg-white pt-16 lg:py-24">
-		<div className="pb-16 bg-[#152258] lg:pb-0 lg:z-10 lg:relative">
+		<div className="pb-16 bg-indigo-600 lg:pb-0 lg:z-10 lg:relative">
 			<div className="lg:mx-auto lg:max-w-7xl lg:px-8 lg:grid lg:grid-cols-3 lg:gap-8">
 				<div className="relative lg:-my-8">
 					<div
 						aria-hidden="true"
 						className="absolute inset-x-0 top-0 h-1/2 bg-white lg:hidden"
 					/>
-					<div className="mx-auto max-w-md px-4 sm:max-w-3xl bg-[#040B27] sm:px-6 lg:p-0 lg:h-full">
+					<div className="mx-auto max-w-md px-4 sm:max-w-3xl sm:px-6 lg:p-0 lg:h-full">
 						<div className="aspect-w-10 aspect-h-6 rounded-xl shadow-xl overflow-hidden sm:aspect-w-16 sm:aspect-h-7 lg:aspect-none lg:h-full">
-							<picture>
-								<img
-									className="object-contain lg:h-full lg:w-full"
-									src="/logo-big.jpg"
-									alt="CodeNight Developers Community"
-								/>
-							</picture>
+							{/* eslint-disable-next-line @next/next/no-img-element */}
+							<img
+								className="object-cover lg:h-full lg:w-full"
+								src="/big-banner.png"
+								alt="CodeNight Developers Community"
+							/>
 						</div>
 					</div>
 				</div>
@@ -214,9 +155,6 @@ const AboutUs = () => (
 					<div className="mx-auto max-w-md px-4 sm:max-w-2xl sm:px-6 lg:px-0 lg:py-20 lg:max-w-none">
 						<blockquote>
 							<div>
-								<h3 className="text-4xl font-bold hidden md:inline text-white">
-									About us
-								</h3>
 								<p className="mt-6 text-2xl font-medium text-white">
 									CodeNight Developers Community is a community of developers
 									who are passionate about coding, software development, and
@@ -226,12 +164,6 @@ const AboutUs = () => (
 									development.
 								</p>
 							</div>
-							<footer className="mt-6">
-								<p className="text-base font-medium text-white">Written by</p>
-								<p className="text-base font-medium text-indigo-100">
-									Chat GPT
-								</p>
-							</footer>
 						</blockquote>
 					</div>
 				</div>

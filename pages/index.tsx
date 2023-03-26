@@ -201,14 +201,22 @@ const Partners = () => (
 			<h2 className="text-3xl font-extrabold text-center">Special Thanks To</h2>
 			<div className="flow-root mt-8 lg:mt-10">
 				<div className="-mt-4 -ml-8 flex flex-wrap justify-center lg:-ml-4">
-					<div className="mt-4 ml-8 flex flex-grow flex-shrink-0 lg:flex-grow-0 lg:ml-4">
+					<div className="mt-4 ml-8 flex-grow flex-shrink-0 lg:flex-grow-0 lg:ml-4 flex justify-center">
 						<picture>
-							<img className="h-12" src="/hahucloud-logo.png" alt="HahuCloud" />
+							<img
+								className="h-12 outline-black outline-2"
+								src="/hahucloud-logo.png"
+								alt="HahuCloud"
+							/>
 						</picture>
 					</div>
-					<div className="mt-4 ml-8 flex flex-grow flex-shrink-0 lg:flex-grow-0 lg:ml-4">
+					<div className="mt-4 ml-8 flex-grow flex-shrink-0 lg:flex-grow-0 lg:ml-4 flex justify-center">
 						<picture>
-							<img className="h-12" src="/chapa-logo.png" alt="Chapa" />
+							<img
+								className="h-12 outline-black outline-2"
+								src="/chapa-logo.png"
+								alt="Chapa"
+							/>
 						</picture>
 					</div>
 				</div>

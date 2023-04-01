@@ -187,15 +187,6 @@ const Partners = () => (
 							/>
 						</picture>
 					</div>
-					<div className="mt-4 ml-8 flex-grow flex-shrink-0 lg:flex-grow-0 lg:ml-4 flex justify-center">
-						<picture>
-							<img
-								className="h-12 outline-black outline-2"
-								src="/chapa-logo.png"
-								alt="Chapa"
-							/>
-						</picture>
-					</div>
 				</div>
 			</div>
 		</div>

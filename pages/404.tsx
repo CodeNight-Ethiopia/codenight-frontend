@@ -1,12 +1,9 @@
 import Head from "next/head";
-import { FC } from "react";
-
-import Logo from "@/assets/Logo";
-import Nav from "@/components/nav/Nav";
+import Link from "next/link";
 
 const PageHead = () => (
 	<Head>
-		<title>Coming Soon | CodeNight</title>
+		<title>Not Found | CodeNight</title>
 		<meta
 			name="description"
 			content="Community of Ethiopian developers to showcase their projects"
@@ -15,28 +12,28 @@ const PageHead = () => (
 	</Head>
 );
 
-const HeroSection = () => (
-	<section className="px-4 py-32 mx-auto max-w-7xl">
-		<div className="w-full mx-auto text-left md:w-11/12 xl:w-8/12 md:text-center">
-			<div className="flex items-center justify-center w-20 h-20 mx-auto mb-6 rounded-full bg-gray-100">
-				<Logo />
-			</div>
-			<h1 className="mb-3 text-4xl font-bold text-gray-900 md:text-5xl md:leading-tight md:font-extrabold">
-				Coming Soon
-			</h1>
-			<p className="mb-6 text-lg text-gray-500 md:text-xl md:leading-normal">
-				Stay tuned for more updates
-			</p>
-		</div>
-	</section>
-);
-
 export default function ComingSoon() {
 	return (
 		<>
 			<PageHead />
-			<main>
-				<HeroSection />
+			<main className="grid min-h-full place-items-center bg-white px-6 py-24 sm:py-32 lg:px-8">
+				<div className="text-center">
+					<p className="text-base font-semibold text-indigo-600">404</p>
+					<h1 className="mt-4 text-3xl font-bold tracking-tight text-gray-900 sm:text-5xl">
+						Page not found
+					</h1>
+					<p className="mt-6 text-base leading-7 text-gray-600">
+						Sorry, we couldn’t find the page you’re looking for.
+					</p>
+					<div className="mt-10 flex items-center justify-center gap-x-6">
+						<Link
+							href="/"
+							className="rounded-md bg-indigo-600 px-3.5 py-2.5 text-sm font-semibold text-white shadow-sm hover:bg-indigo-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600"
+						>
+							Go back home
+						</Link>
+					</div>
+				</div>
 			</main>
 		</>
 	);

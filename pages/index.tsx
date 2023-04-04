@@ -1,7 +1,7 @@
 import Head from "next/head";
 
 import Logo from "@/assets/Logo";
-import Nav from "@/components/nav/Nav";
+import Layout from "@/components/layout";
 
 const PageHead = () => (
 	<Head>
@@ -231,13 +231,12 @@ export default function Home() {
 	return (
 		<>
 			<PageHead />
-			<main>
-				<Nav />
+			<Layout>
 				<HeroSection />
 				<Programs />
 				<AboutUs />
 				<Partners />
-			</main>
+			</Layout>
 			<StickyBottomBanner />
 		</>
 	);

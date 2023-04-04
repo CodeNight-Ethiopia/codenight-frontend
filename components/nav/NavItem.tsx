@@ -1,19 +1,20 @@
 import Link from "next/link";
+import { useRouter } from "next/router";
 import { ReactNode } from "react";
 
 interface NavItemProps {
 	children: ReactNode;
-	primary?: boolean;
 	link: string;
 }
 
-const NavItem = ({ primary, children, link }: NavItemProps) => {
+const NavItem = ({ children, link }: NavItemProps) => {
+	const router = useRouter();
 	return (
 		<li>
 			<Link
 				href={link}
 				className={`font-medium tracking-wide ${
-					primary ? "text-brand-black" : "text-gray-700"
+					router.pathname === link ? "text-indigo-600" : "text-gray-700"
 				}  transition-colors duration-200 hover:text-deep-purple-accent-400`}
 			>
 				{children}

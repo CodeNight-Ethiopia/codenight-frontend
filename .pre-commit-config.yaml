@@ -1,0 +1,33 @@
+repos:
+  - repo: https://github.com/okonet/lint-staged
+    rev: v11.0.0
+    hooks:
+      - id: lint-staged
+        name: lint-staged
+        entry: npx
+        args: [lint-staged]
+
+  - repo: local
+    hooks:
+      - id: rome
+        name: Rome
+        entry: npx
+        args: [rome, "check", "./.romerc.js", "."]
+        language: system
+        stages: [commit]
+
+      - id: run-tests
+        name: Run Tests
+        entry: npm
+        args: [run, test]
+        language: system
+        pass_filenames: false
+        stages: [commit]
+
+      - id: build
+        name: Build
+        entry: npm
+        args: [run, build]
+        language: system
+        pass_filenames: false
+        stages: [push]

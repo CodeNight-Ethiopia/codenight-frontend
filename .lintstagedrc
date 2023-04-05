@@ -1,4 +1,0 @@
-{
-  "**/*.{js,ts}": ["npx rome check --config .romerc.js"],
-  "**/*": ["npx prettier --write"]
-}

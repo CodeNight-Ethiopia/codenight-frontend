@@ -9,7 +9,9 @@ Before you start working on the project, please follow these steps:
 1. Fork the repository to your own account
 2. Clone the repository to your local machine
 3. Install the required dependencies by running `pnpm install`
-4. Create a new branch for your changes
+4. Install [pre-commit](https://pre-commit.com/)
+5. Run `pre-commit install` on the base directory
+6. Create a new branch for your changes
 
 ## Making Changes
 

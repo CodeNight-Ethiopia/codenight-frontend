@@ -12,7 +12,7 @@ repos:
       - id: rome
         name: Rome
         entry: npx
-        args: [rome, "check", "./.romerc.js", "."]
+        args: [rome, "check", "."]
         language: system
         stages: [commit]
 

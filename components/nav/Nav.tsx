@@ -41,6 +41,7 @@ const Nav = () => {
 					<NavItem link="/">Home</NavItem>
 					<NavItem link="/about-us">About us</NavItem>
 					<NavItem link="/read">Read</NavItem>
+					<NavItem link="/faq">FAQs</NavItem>
 					<NavItem link="/contact-us">Contact Us</NavItem>
 				</ul>
         <div className="sm:hidden flex flex-1 justify-end items-center ">

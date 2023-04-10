@@ -4,17 +4,8 @@ import hahucloud from "../assets/Image/hahucloud-logo.png";
 import Logo from "@/assets/Logo";
 import Nav from "@/components/nav/Nav";
 import Image from "next/image";
+import Meta from "@/components/meta/Meta";
 
-const PageHead = () => (
-	<Head>
-		<title>CodeNight</title>
-		<meta
-			name="description"
-			content="Community of 🇪🇹 developers to showcase their projects"
-		/>
-		<link rel="icon" href="/favicon.ico" />
-	</Head>
-);
 
 const HeroSection = () => (
 	<section className="px-4 py-32 mx-auto max-w-7xl">
@@ -234,7 +225,7 @@ const StickyBottomBanner = () => (
 export default function Home() {
 	return (
 		<>
-			<PageHead />
+			<Meta />
 			<main>
 				<Nav />
 				<HeroSection />

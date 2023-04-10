@@ -1,5 +1,5 @@
 import Link from "next/link";
-import { ReactNode } from "react";
+import { FC, ReactNode } from "react";
 
 interface NavItemProps {
 	children: ReactNode;
@@ -7,7 +7,7 @@ interface NavItemProps {
 	link: string;
 }
 
-const NavItem = ({ primary, children, link }: NavItemProps) => {
+const NavItem: FC<NavItemProps> = ({ primary, children, link }) => {
 	return (
 		<li>
 			<Link

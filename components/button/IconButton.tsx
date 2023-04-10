@@ -1,11 +1,11 @@
-import { ReactElement } from "react";
+import { FC, ReactNode } from "react";
 
 interface IconButtonProps {
-	children: ReactElement;
+	children: ReactNode;
 	onClick: () => void;
 }
 
-const IconButton = ({ children, onClick }: IconButtonProps) => {
+const IconButton: FC<IconButtonProps> = ({ children, onClick }) => {
 	return (
 		<button
 			onClick={onClick}

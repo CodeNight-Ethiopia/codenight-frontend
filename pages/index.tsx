@@ -1,7 +1,9 @@
 import Head from "next/head";
 
+import hahucloud from "../assets/Image/hahucloud-logo.png";
 import Logo from "@/assets/Logo";
 import Nav from "@/components/nav/Nav";
+import Image from "next/image";
 
 const PageHead = () => (
 	<Head>
@@ -180,10 +182,12 @@ const Partners = () => (
 				<div className="-mt-4 -ml-8 flex flex-wrap justify-center lg:-ml-4">
 					<div className="mt-4 ml-8 flex-grow flex-shrink-0 lg:flex-grow-0 lg:ml-4 flex justify-center">
 						<picture>
-							<img
-								className="h-12 outline-black outline-2"
-								src="/hahucloud-logo.png"
+							<Image
+								className="h-12 outline-black outline-2 object-cover"
+								src={hahucloud}
 								alt="HahuCloud"
+								width={300}
+								height={48}
 							/>
 						</picture>
 					</div>

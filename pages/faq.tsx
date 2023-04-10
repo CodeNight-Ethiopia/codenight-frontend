@@ -4,27 +4,28 @@ import StickyBottomBanner from "@/components/StickyBottomBanner";
 import Nav from "@/components/nav/Nav";
 
 const data = [
-    {
-      title: "What is an API?",
-      desc: "API stands for Application Programming Interface. It's a set of protocols, routines, and tools for building software and applications. APIs allow different software applications to communicate with each other and share data."
-    },
-    {
-      title: "What is Git?",
-      desc: "Git is a version control system that allows developers to track changes in their codebase, collaborate with other developers, and revert to earlier versions of their code if needed."
-    },
-    {
-      title: "What is RESTful API?",
-      desc: "REST stands for Representational State Transfer. It's an architectural style that defines a set of constraints to be used when creating web services. A RESTful API is an API that adheres to these constraints, and uses HTTP requests to GET, POST, PUT, and DELETE data."
-    },
-    {
-      title: "What is Docker?",
-      desc: "Docker is a containerization platform that allows developers to package their applications and dependencies into containers. Containers are isolated environments that run on a host machine, and can be easily deployed and scaled."
-    },
-    {
-      title: "What is Agile methodology?",
-      desc: "Agile methodology is an iterative and incremental approach to software development. It emphasizes collaboration, flexibility, and customer satisfaction. Agile teams work in short iterations, and regularly review and adjust their approach to meet changing requirements."
-    }
-  ]
+  {
+    title: "What is codenight?",
+    desc: "Code-night is a developer community based in Ethiopia that aims to connect, support, and empower developers to build innovative solutions and grow their skills.",
+  },
+  {
+    title: "Who can join Codenight?",
+    desc: "Anyone who is interested in programming and software development can join Codenight. The community is open to developers of all levels, from beginners to experienced professionals.",
+  },
+  {
+    title:
+      "What programming languages and technologies does Codenight focus on",
+    desc: "Codenight is an inclusive community that welcomes developers of all backgrounds and skill levels. While the community doesn't focus on any particular language or technology, members are encouraged to share their knowledge and expertise with others.",
+  },
+  {
+    title: "How can I stay up-to-date with Codenight activities",
+    desc: "To stay up-to-date with Codenight activities, you can follow the community's social media accounts, or check our website for the latest updates. You can also engage with other members of the community to stay informed about upcoming events and opportunities.",
+  },
+  {
+    title: "How can I suggest ideas for Codenight activities or events?",
+    desc: "If you have ideas for Codenight activities or events, you can share them with the community through their social media groups or by reaching out to the organizers directly. The community is always open to new ideas and welcomes input from its members.",
+  },
+];
 
 const FAQPage = () => {
   return (
@@ -44,10 +45,11 @@ const FAQPage = () => {
         </section>
         {/* FAQs section */}
         <section className="flex flex-col justify-start items-center mx-auto px-10">
-            
-            {data.map((faq,idx) => {
-                return <FAQSingleCard key={idx} title={faq.title} desc={faq.desc} />
-            })}
+          {data.map((faq, idx) => {
+            return (
+              <FAQSingleCard key={idx} title={faq.title} desc={faq.desc} />
+            );
+          })}
         </section>
         {/* spacing */}
         <div className="py-16"></div>

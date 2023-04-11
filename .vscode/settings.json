@@ -1,6 +1,6 @@
 {
   "[typescriptreact]": {
-    "editor.defaultFormatter": "esbenp.prettier-vscode"
+    "editor.defaultFormatter": "rome.rome"
   },
   // "editor.formatOnSave": true,
   "editor.defaultFormatter": "rome.rome"

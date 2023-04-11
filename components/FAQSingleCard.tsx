@@ -1,12 +1,13 @@
 import { Disclosure } from "@headlessui/react";
 import { ChevronRightIcon } from "@heroicons/react/20/solid";
+import { FC } from "react";
 
 interface FAQSingleCardProps {
 	title: string;
 	desc: string;
 }
 
-const FAQSingleCard = ({ title, desc }: FAQSingleCardProps) => {
+const FAQSingleCard: FC<FAQSingleCardProps> = ({ title, desc }) => {
 	return (
 		<div className="border-b border-gray-200 py-5 max-w-3xl flex flex-col w-full gap-2">
 			<Disclosure>

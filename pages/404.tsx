@@ -35,6 +35,7 @@ export default function ComingSoon() {
 	return (
 		<>
 			<PageHead />
+			
 			<main>
 				<HeroSection />
 			</main>

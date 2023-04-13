@@ -8,7 +8,7 @@ const FAQPage = () => {
   return (
     <>
       <PageHead />
-      <Nav />
+      
       <main>
         {/* heading section */}
         <section className="w-full h-fit flex flex-col space-y-8 justify-center items-center py-32">

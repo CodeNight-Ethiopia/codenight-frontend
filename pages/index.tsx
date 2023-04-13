@@ -226,7 +226,7 @@ export default function Home() {
     <>
       <PageHead />
       <main>
-        <Nav />
+        
         <HeroSection />
         <Programs />
         <AboutUs />
@@ -236,3 +236,8 @@ export default function Home() {
     </>
   );
 }
+
+
+
+ 
+       

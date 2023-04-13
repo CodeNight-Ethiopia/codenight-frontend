@@ -5,21 +5,34 @@ import Logo from "@/assets/Logo";
 import Nav from "@/components/nav/Nav";
 import Image from "next/image";
 import PageHead from "@/components/PageHead";
+import { motion,AnimateSharedLayout, AnimatePresence } from "framer-motion";
+import { useScrollHook } from "@/components/useScroll";
+import {animation, scrollReveal} from "../animation/animation"
 
-const HeroSection = () => (
-  <section className="px-4 py-32 mx-auto max-w-7xl">
-    <div className="w-full mx-auto text-left md:w-11/12 xl:w-8/12 md:text-center">
-      <h1 className="mb-3 text-4xl font-bold text-gray-900 md:text-5xl md:leading-tight md:font-extrabold">
-        Community of 🇪🇹 developers to showcase their projects
-      </h1>
-      <p className="mb-6 text-lg text-gray-500 md:text-xl md:leading-normal">
-        Codenight, is a community of developers to showcase their projects. We
-        offer you the opportunity to display your work publicly and reach people
-        who are interested in developing their skills.
-      </p>
-    </div>
-  </section>
+const HeroSection = () => {
+  const [element,controls] = useScrollHook();
+  
+  return(
+    <motion.div
+       variants={scrollReveal}
+       animate={controls} 
+       initial="hiddens"
+       ref={element}  >
+    <section className="px-4 py-32 mx-auto max-w-7xl">
+      <div className="w-full mx-auto text-left md:w-11/12 xl:w-8/12 md:text-center">
+        <h1 className="mb-3 text-4xl font-bold text-gray-900 md:text-5xl md:leading-tight md:font-extrabold">
+          Community of 🇪🇹 developers to showcase their projects
+        </h1>
+        <p className="mb-6 text-lg text-gray-500 md:text-xl md:leading-normal">
+          Codenight, is a community of developers to showcase their projects. We
+          offer you the opportunity to display your work publicly and reach people
+          who are interested in developing their skills.
+        </p>
+      </div>
+    </section>
+    </motion.div>
 );
+}
 
 const programs = [
   {
@@ -86,7 +99,15 @@ const programs = [
   },
 ];
 
-const Programs = () => (
+const Programs = () => {
+  const [element,controls] = useScrollHook()
+return(
+  <motion.div
+       variants={scrollReveal}
+       animate={controls} 
+       initial="hiddens"
+       ref={element}  >
+
   <div className="relative bg-white py-16 sm:py-24 lg:py-32">
     <div className="mx-auto max-w-md px-4 text-center sm:max-w-3xl sm:px-6 lg:max-w-7xl lg:px-8">
       <h2 className="text-base font-semibold uppercase tracking-wider text-indigo-600">
@@ -121,9 +142,18 @@ const Programs = () => (
       </div>
     </div>
   </div>
+  </motion.div>
 );
+  }
 
-const AboutUs = () => (
+const AboutUs = () => {
+  const [element,controls] = useScrollHook()
+return (  
+  <motion.div
+  variants={scrollReveal}
+  animate={controls} 
+  initial="hiddens"
+  ref={element}  >
   <div className="bg-white pt-16 lg:py-24">
     <div className="pb-16 bg-indigo-600 lg:pb-0 lg:z-10 lg:relative">
       <div className="lg:mx-auto lg:max-w-7xl lg:px-8 lg:grid lg:grid-cols-3 lg:gap-8">
@@ -162,9 +192,18 @@ const AboutUs = () => (
       </div>
     </div>
   </div>
+ </motion.div>
 );
+}
 
-const Partners = () => (
+const Partners = () => {
+const [element,controls] = useScrollHook() 
+return (
+  <motion.div
+  variants={scrollReveal}
+  animate={controls} 
+  initial="hiddens"
+  ref={element}  >
   <div className="mb-24">
     <div className="max-w-7xl mx-auto py-16 px-4 sm:py-20 sm:px-6 lg:px-8">
       <h2 className="text-3xl font-extrabold text-center">Special Thanks To</h2>
@@ -185,7 +224,9 @@ const Partners = () => (
       </div>
     </div>
   </div>
+</motion.div>
 );
+}
 
 const StickyBottomBanner = () => (
   <div className="fixed inset-x-0 bottom-0 z-50">
@@ -225,12 +266,19 @@ export default function Home() {
   return (
     <>
       <PageHead />
-      <main>
-        
+      <main> 
+      <AnimatePresence mode="wait">    
+      <motion.div 
+        variants={animation}
+        initial="hidden"
+        animate="show"
+        exit="exit" >
         <HeroSection />
         <Programs />
         <AboutUs />
         <Partners />
+       </motion.div>
+       </AnimatePresence> 
       </main>
       <StickyBottomBanner />
     </>

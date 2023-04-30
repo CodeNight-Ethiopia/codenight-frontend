@@ -5,6 +5,7 @@ import Logo from "@/assets/Logo";
 import Nav from "@/components/nav/Nav";
 import Image from "next/image";
 import PageHead from "@/components/PageHead";
+import Contributors from "@/components/contributors";
 
 const HeroSection = () => (
   <section className="px-4 py-32 mx-auto max-w-7xl">
@@ -231,6 +232,7 @@ export default function Home() {
         <Programs />
         <AboutUs />
         <Partners />
+        <Contributors />
       </main>
       <StickyBottomBanner />
     </>

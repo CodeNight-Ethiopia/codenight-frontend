@@ -29,7 +29,7 @@ const FAQPage = () => {
           })}
         </section>
         {/* spacing */}
-        <div className="py-16"></div>
+        <div className="py-16" />
       </main>
       <StickyBottomBanner />
     </>

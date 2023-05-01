@@ -24,12 +24,17 @@ const HeroSection = () => (
           <Logo />
         </Link>
       </div>
+
+      <div className="sm:flex justify-center items-center text-center flex-col">
+
       <h1 className="mb-3 text-4xl font-bold text-gray-900 md:text-5xl md:leading-tight md:font-extrabold">
         Coming Soon
       </h1>
       <p className="mb-6 text-lg text-gray-500 md:text-xl md:leading-normal">
         Stay tuned for more updates
       </p>
+
+      </div>
     </div>
   </section>
 );

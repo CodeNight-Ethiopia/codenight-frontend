@@ -1,15 +1,14 @@
 import Head from 'next/head'
 import hahucloud from '../assets/Image/hahucloud-logo.png'
 import Logo from '@/assets/Logo'
-import Nav from '@/components/nav/Nav'
 import Image from 'next/image'
 import PageHead from '@/components/PageHead'
-import Contributors from '@/components/contributors'
+import Contributors from '@/components/Contributors'
 
 const HeroSection = () => (
-	<section className='px-4 py-32 mx-auto max-w-7xl'>
+	<section className='px-4 py-32 mx-auto max-w-7xl '>
 		<div className='w-full mx-auto text-left md:w-11/12 xl:w-8/12 md:text-center'>
-			<h1 className='mb-3 text-4xl font-bold text-gray-900 md:text-5xl md:leading-tight md:font-extrabold'>
+			<h1 className='mb-3 text-4xl font-bold text-gray-50 md:text-5xl md:leading-tight md:font-extrabold '>
 				Community of 🇪🇹 developers to showcase their projects
 			</h1>
 			<p className='mb-6 text-lg text-gray-500 md:text-xl md:leading-normal'>
@@ -84,20 +83,20 @@ const programs = [
 ]
 
 const Programs = () => (
-	<div className='relative py-16 bg-white sm:py-24 lg:py-32'>
+	<div className='relative py-16 sm:py-24 lg:py-32'>
 		<div className='max-w-md px-4 mx-auto text-center sm:max-w-3xl sm:px-6 lg:max-w-7xl lg:px-8'>
 			<h2 className='text-base font-semibold tracking-wider text-indigo-600 uppercase'>
 				Our Programs
 			</h2>
-			<p className='mt-2 text-3xl font-extrabold tracking-tight text-gray-900 sm:text-4xl'>
+			<p className='mt-2 text-3xl font-extrabold tracking-tight text-white sm:text-4xl'>
 				Meet our Community Members
 			</p>
 
 			<div className='mt-12'>
 				<div className='grid grid-cols-1 gap-8 lg:grid-cols-3'>
 					{programs.map((feature) => (
-						<div key={feature.name} className='h-full pt-6'>
-							<div className='flow-root h-full px-6 pb-8 rounded-lg bg-gray-50'>
+						<div key={feature.name} className='h-full pt-6 '>
+							<div className='flow-root h-full px-6 pb-8 rounded-lg shadow-lg bg-gray-50 shadow-slate-700'>
 								<div className='-mt-6'>
 									<div>
 										<span className='inline-flex items-center justify-center p-3 text-white bg-indigo-500 rounded-md shadow-lg'>
@@ -121,16 +120,16 @@ const Programs = () => (
 )
 
 const AboutUs = () => (
-	<div className='pt-16 bg-white lg:py-24'>
+	<div className='pt-16 lg:py-24'>
 		<div className='pb-16 bg-indigo-600 lg:pb-0 lg:z-10 lg:relative'>
 			<div className='lg:mx-auto lg:max-w-7xl lg:px-8 lg:grid lg:grid-cols-3 lg:gap-8'>
 				<div className='relative lg:-my-8'>
 					<div
 						aria-hidden='true'
-						className='absolute inset-x-0 top-0 bg-white h-1/2 lg:hidden'
+						className='absolute inset-x-0 top-0 h-1/2 lg:hidden'
 					/>
 					<div className='max-w-md px-4 mx-auto sm:max-w-3xl sm:px-6 lg:p-0 lg:h-full'>
-						<div className='overflow-hidden shadow-xl aspect-w-10 aspect-h-6 rounded-xl sm:aspect-w-16 sm:aspect-h-7 lg:aspect-none lg:h-full'>
+						<div className='overflow-hidden shadow-xl aspect-w-10 aspect-h-6 rounded-xl sm:aspect-w-16 sm:aspect-h-7 lg:aspect-none lg:h-full shadow-gray-700'>
 							{/* eslint-disable-next-line @next/next/no-img-element */}
 							<img
 								className='object-cover lg:h-full lg:w-full'
@@ -164,7 +163,9 @@ const AboutUs = () => (
 const Partners = () => (
 	<div className='mb-24'>
 		<div className='px-4 py-16 mx-auto max-w-7xl sm:py-20 sm:px-6 lg:px-8'>
-			<h2 className='text-3xl font-extrabold text-center'>Special Thanks To</h2>
+			<h2 className='text-3xl font-extrabold text-center text-white'>
+				Special Thanks To
+			</h2>
 			<div className='flow-root mt-8 lg:mt-10'>
 				<div className='flex flex-wrap justify-center -mt-4 -ml-8 lg:-ml-4'>
 					<div className='flex justify-center flex-grow flex-shrink-0 mt-4 ml-8 lg:flex-grow-0 lg:ml-4'>
@@ -184,43 +185,11 @@ const Partners = () => (
 	</div>
 )
 
-const StickyBottomBanner = () => (
-	<div className='fixed inset-x-0 bottom-0 z-50'>
-		<div className='bg-indigo-600'>
-			<div className='px-3 py-3 mx-auto max-w-7xl sm:px-6 lg:px-8'>
-				<div className='flex flex-wrap items-center justify-between'>
-					<div className='flex items-center flex-1 w-0'>
-						<span className='flex p-2 bg-indigo-800 rounded-lg'>
-							<div
-								className='flex items-center justify-center w-6 h-6 text-white'
-								aria-hidden='true'>
-								<Logo />
-							</div>
-						</span>
-						<p className='ml-3 font-medium text-white truncate'>
-							<span className='hidden md:inline'>
-								Join the community on telegram
-							</span>
-						</p>
-					</div>
-					<div className='flex-shrink-0 order-3 w-full mt-2 sm:order-2 sm:mt-0 sm:w-auto'>
-						<a
-							href='https://t.me/codenight'
-							className='flex items-center justify-center px-4 py-2 text-sm font-medium text-indigo-600 bg-white border border-transparent rounded-md shadow-sm hover:bg-indigo-50'>
-							Join Now
-						</a>
-					</div>
-				</div>
-			</div>
-		</div>
-	</div>
-)
-
 export default function Home() {
 	return (
 		<>
 			<PageHead />
-			<main>
+			<main className='bg-slate-950'>
 				<HeroSection />
 				<Programs />
 				<AboutUs />

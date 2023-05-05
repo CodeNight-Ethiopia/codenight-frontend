@@ -31,7 +31,7 @@ const Contributors = () => {
 	}, [])
 	return (
 		<>
-			<h1 className='my-10 text-3xl font-extrabold text-center'>
+			<h1 className='my-10 text-3xl font-extrabold text-center text-gray-50'>
 				Our Contributors
 			</h1>
 			{/* Contributors section */}
@@ -41,7 +41,7 @@ const Contributors = () => {
 						<Link
 							href={contributor.html_url}
 							key={contributor.id}
-							className='relative w-12 h-12 overflow-hidden rounded-full cursor-pointer'>
+							className='relative w-12 h-12 overflow-hidden border rounded-full cursor-pointer border-yellow-50'>
 							<Image
 								src={contributor.avatar_url}
 								alt={contributor.login}

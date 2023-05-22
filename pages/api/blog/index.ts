@@ -6,37 +6,50 @@ export default async function handler(
   req: NextApiRequest,
   res: NextApiResponse
 ) {
-  console.log("api called");
   const { method } = req;
 
   await dbConnect();
-  console.log("method : ", method);
 
   switch (method) {
     case "GET":
       try {
-        console.log("get method called");
-        const blogs = await Blog.find(
-          {}
-        ); /* find all the data in our database */
-        res.status(200).json({ success: true, data: blogs });
+        const { id, tag, publisher } = req.query;
+
+        // Get blog by ID
+        if (id) {
+          const blog = await Blog.findById(id);
+          if (!blog) {
+            return res
+              .status(404)
+              .json({ success: false, message: "Blog not found" });
+          }
+          return res.status(200).json({ success: true, data: blog });
+        }
+
+        // Filter blogs by tag and/or publisher
+        const query = {};
+        if (tag) {
+          query.tag = tag;
+        }
+        if (publisher) {
+          query.published_by = publisher;
+        }
+
+        const blogs = await Blog.find(query);
+        return res.status(200).json({ success: true, data: blogs });
       } catch (error) {
-        res.status(400).json({ success: false });
+        console.error(error);
+        return res.status(500).json({ success: false, error: "Server Error" });
       }
-      break;
     case "POST":
       try {
-        console.log("post method called");
-        const blog = await Blog.create(
-          req.body
-        ); /* create a new model in the database */
-        res.status(201).json({ success: true, data: blog });
+        const blog = await Blog.create(req.body);
+        return res.status(201).json({ success: true, data: blog });
       } catch (error) {
-        res.status(400).json({ success: false });
+        console.error(error);
+        return res.status(400).json({ success: false, error: "Bad Request" });
       }
-      break;
     default:
-      res.status(400).json({ success: false });
-      break;
+      return res.status(400).json({ success: false, error: "Bad Request" });
   }
 }

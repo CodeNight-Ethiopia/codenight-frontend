@@ -1,33 +1,28 @@
-import mongoose, { Connection } from "mongoose";
+import mongoose from "mongoose";
 
-const MONGODB_URI =
-  process.env.MONGODB_URI ||
-  "mongodb://localhost:27017/codenight?retryWrites=true&w=majority";
+let cachedConnection: mongoose.Connection | null = null;
 
-if (!MONGODB_URI) {
-  throw new Error("Please define the MONGODB_URI environment variable");
-}
-
-let cachedConnection: Connection | null = null;
-
-async function connectToDatabase(): Promise<Connection> {
-  if (cachedConnection) {
-    return cachedConnection;
-  }
-
+const connectMongoDB = async () => {
   try {
+    if (cachedConnection) {
+      return cachedConnection;
+    }
+
     const options = {
       useNewUrlParser: true,
       useUnifiedTopology: true,
     };
 
-    const connection = await mongoose.connect(MONGODB_URI, options);
+    const connection = await mongoose.connect(
+      process.env.MONGODB_URI || "",
+      options
+    );
     cachedConnection = connection.connection;
     return connection.connection;
   } catch (error) {
     console.error("Failed to connect to MongoDB:", error);
     throw error;
   }
-}
+};
 
-export default connectToDatabase;
+export default connectMongoDB;

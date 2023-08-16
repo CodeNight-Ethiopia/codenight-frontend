@@ -41,7 +41,7 @@ Open your browser and visit http://localhost:3000 to access the CodeNight platfo
 
 ## Contributing
 
-We welcome contributions from developers of all skill levels. If you'd like to contribute to CodeNight, please follow the [Contribution guidlines](CONTRIBUTING)
+We welcome contributions from developers of all skill levels. If you'd like to contribute to CodeNight, please follow the [Contribution guidlines](CONTRIBUTING.md)
 
 ## Feedback
 

@@ -11,6 +11,7 @@ import pic6 from "../assets/Image/pic6.jpg";
 import V2 from "../assets/Image/V2.jpg";
 import highlighted from "../assets/Image/highlighted.jpg";
 import StickyBottomBanner from "@/components/StickyBottomBanner";
+import Link from "next/link";
 
 const HeroSection = () => (
   <section className="hero bg-gray-900 text-white py-20">
@@ -25,12 +26,12 @@ const HeroSection = () => (
           Join us as we bring together passionate individuals from across the
           tech landscape to explore cutting-edge technologies.
         </p>
-        <a
+        <Link
           href="#events"
-          className="bg-blue-600 hover:bg-blue-700 text-white py-3 px-6 rounded-md text-lg font-semibold inline-block"
+          className="bg-indigo-600 hover:bg-indigo-700 text-white py-3 px-6 rounded-md text-lg font-semibold inline-block"
         >
           Explore Upcoming Events
-        </a>
+        </Link>
       </div>
     </div>
   </section>
@@ -127,7 +128,7 @@ const Session = () => (
           </p>
           <a
             href="https://www.linkedin.com/company/code-night/?miniCompanyUrn=urn%3Ali%3Afsd_company%3A91708512&lipi=urn%3Ali%3Apage%3Acompanies_company_posts_index%3B3f27d26d-dcdd-4755-8b9a-7788113a97a6"
-            className="bg-blue-600 hover:bg-blue-700 text-white py-2 px-4 rounded-md inline-block"
+            className="text-indigo-600 hover:bg-blue-700 text-white py-2 px-4 rounded-md inline-block"
           >
             Learn More
           </a>
@@ -152,7 +153,7 @@ const Email = () => (
           placeholder="Your email address"
           className="border border-gray-300 rounded-l-md px-4 py-2 focus:outline-none focus:border-blue-500"
         />
-        <button className="bg-blue-600 text-white py-2 px-4 rounded-r-md hover:bg-blue-700 focus:outline-none focus:bg-blue-700">
+        <button className="bg-indigo-600 text-white py-2 px-4 rounded-r-md hover:bg-indigo-700 focus:outline-none focus:bg-indigo-700">
           Subscribe
         </button>
       </div>
@@ -180,12 +181,12 @@ const Upcoming = () => (
             from each other. Even we put faces to the usernames and the voices
             to the names.
           </p>
-          <a
+          <Link
             href="https://www.linkedin.com/company/code-night/?miniCompanyUrn=urn%3Ali%3Afsd_company%3A91708512&lipi=urn%3Ali%3Apage%3Acompanies_company_posts_index%3B3f27d26d-dcdd-4755-8b9a-7788113a97a6"
-            className="bg-blue-600 hover:bg-blue-700 text-white py-2 px-4 rounded-md inline-block"
+            className="bg-indigo-600 hover:bg-indigo-700 text-white py-2 px-4 rounded-md inline-block"
           >
             Learn More
-          </a>
+          </Link>
         </div>
       </div>
     </div>
@@ -199,24 +200,24 @@ const Footer = () => (
         <h4 className="text-lg font-bold mb-2">Quick Links</h4>
         <ul className="flex flex-col md:flex-row">
           <li className="mr-4">
-            <a href="/" className="hover:text-gray-300">
+            <Link href="/" className="hover:text-gray-300">
               Home
-            </a>
+            </Link>
           </li>
           <li className="mr-4">
-            <a href="/dev-meetup-v2" className="hover:text-gray-300">
+            <Link href="/dev-meetup-v2" className="hover:text-gray-300">
               Events
-            </a>
+            </Link>
           </li>
           <li className="mr-4">
-            <a href="/about" className="hover:text-gray-300">
+            <Link href="/about" className="hover:text-gray-300">
               About
-            </a>
+            </Link>
           </li>
           <li>
-            <a href="/faq" className="hover:text-gray-300">
+            <Link href="/faq" className="hover:text-gray-300">
               FAQ
-            </a>
+            </Link>
           </li>
         </ul>
       </div>

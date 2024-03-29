@@ -7,6 +7,9 @@ import Image from "next/image";
 import PageHead from "@/components/PageHead";
 import Contributors from "@/components/Contributors";
 
+import { Button } from "@/components/ui/button";
+
+
 const HeroSection = () => (
   <section className="px-4 py-32 mx-auto max-w-7xl">
     <div className="w-full mx-auto text-left md:w-11/12 xl:w-8/12 md:text-center">

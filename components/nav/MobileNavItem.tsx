@@ -18,8 +18,8 @@ const MobileNavItem: FC<NavItemProps> = ({ primary, children, link }) => {
 				className="flex items-center gap-8"
 			>
 				<span
-					className={`font-bold text-4xl tracking-wide ${
-						primary ? "text-brand-black" : "text-brand-black/50"
+					className={`font-bold text-2xl tracking-wide ${
+						primary ? "text-gray-50" : "text-white"
 					}  transition-colors duration-200 `}
 				>
 					{children}

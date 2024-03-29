@@ -3,8 +3,8 @@ import Link from "next/link";
 import { useEffect, useState } from "react";
 import Logo from "../../assets/Logo";
 import {
-  Bars3Icon as Menu,
-  XMarkIcon as Close,
+	Bars3Icon as Menu,
+	XMarkIcon as Close,
 } from "@heroicons/react/20/solid";
 import MobileNavItem from "@/components/nav/MobileNavItem";
 import { NavigationMenuData } from "@/data";
@@ -12,8 +12,8 @@ import { useParams, usePathname } from "next/navigation";
 import { cn } from "@/lib/utils";
 
 const Nav = () => {
-  const [toggle, setToggle] = useState(false);
-  const [fix, setFixed] = useState(false);
+	const [toggle, setToggle] = useState(false);
+	const [fix, setFixed] = useState(false);
 
   const pathname = usePathname();
   const params = useParams();

@@ -16,13 +16,13 @@ const ThemeButton = () => {
   const currentTheme = theme === "system" ? systemTheme : theme;
   if (!mounted) return null;
 
-  return (
-    <IconButton
-      onClick={() => setTheme(currentTheme === "dark" ? "light" : "dark")}
-    >
-      {currentTheme === "dark" ? <SunIcon /> : <MoonIcon />}
-    </IconButton>
-  );
+	return (
+		<IconButton
+			onClick={() => setTheme(currentTheme === "dark" ? "light" : "dark")}
+		>
+			{currentTheme === "dark" ? <SunIcon /> : <MoonIcon />}
+		</IconButton>
+	);
 };
 
 export default ThemeButton;

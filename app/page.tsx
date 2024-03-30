@@ -1,12 +1,11 @@
-import Head from "next/head";
-
 import hahucloud from "../assets/Image/hahucloud-logo.png";
 import Logo from "@/assets/Logo";
 import Nav from "@/components/nav/Nav";
 import Image from "next/image";
 import PageHead from "@/components/PageHead";
 import Contributors from "@/components/Contributors";
-import { Button } from "@/components/ui/button";
+import { Suspense } from "react";
+import Link from "next/link";
 
 const HeroSection = () => (
   <section className="px-4 py-32 mx-auto max-w-7xl">
@@ -210,12 +209,12 @@ const StickyBottomBanner = () => (
             </p>
           </div>
           <div className="order-3 mt-2 flex-shrink-0 w-full sm:order-2 sm:mt-0 sm:w-auto">
-            <a
+            <Link
               href="https://t.me/codenight"
               className="flex items-center justify-center px-4 py-2 border border-transparent rounded-md shadow-sm text-sm font-medium text-indigo-600 bg-white hover:bg-indigo-50"
             >
               Join Now
-            </a>
+            </Link>
           </div>
         </div>
       </div>
@@ -228,14 +227,14 @@ export default function Home() {
     <>
       <PageHead />
       <main>
-        <Nav />
         <HeroSection />
         <Programs />
         <AboutUs />
         <Partners />
-        <Contributors />
+        <Suspense fallback={<p>Loading.....</p>}>
+          <Contributors />
+        </Suspense>
       </main>
-      <StickyBottomBanner />
     </>
   );
 }

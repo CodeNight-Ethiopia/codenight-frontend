@@ -1,3 +1,4 @@
+"use client";
 import FAQSingleCard from "@/components/FAQSingleCard";
 import PageHead from "@/components/PageHead";
 import StickyBottomBanner from "@/components/StickyBottomBanner";

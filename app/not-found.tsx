@@ -1,8 +1,5 @@
 import Head from "next/head";
-import { FC } from "react";
-
 import Logo from "@/assets/Logo";
-import Nav from "@/components/nav/Nav";
 import Link from "next/link";
 
 const PageHead = () => (

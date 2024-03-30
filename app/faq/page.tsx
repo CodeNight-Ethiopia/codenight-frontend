@@ -8,8 +8,6 @@ import { FAQData } from "@/data";
 const FAQPage = () => {
   return (
     <>
-      <PageHead />
-      <Nav />
       <main>
         {/* heading section */}
         <section className="w-full h-fit flex flex-col space-y-8 justify-center items-center py-32">
@@ -32,7 +30,6 @@ const FAQPage = () => {
         {/* spacing */}
         <div className="py-16" />
       </main>
-      <StickyBottomBanner />
     </>
   );
 };

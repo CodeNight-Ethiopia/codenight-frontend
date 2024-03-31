@@ -1,4 +1,4 @@
-'use client'
+"use client";
 import { Button } from "@/components/ui/button";
 import {
   Dialog,
@@ -13,6 +13,17 @@ import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
 import { SectionHeading } from "./section-heading";
 import { Textarea } from "../ui/textarea";
+import * as React from "react";
+
+import {
+  Select,
+  SelectContent,
+  SelectGroup,
+  SelectItem,
+  SelectLabel,
+  SelectTrigger,
+  SelectValue,
+} from "@/components/ui/select";
 
 export function Register() {
   return (
@@ -81,6 +92,43 @@ export function Register() {
           </div>
           <div className="w-full">
             <div className="flex flex-col w-full justify-center items-start gap-2">
+              <Label htmlFor="gender" className="text-right">
+                Gender
+              </Label>
+              <Select>
+                <SelectTrigger className="w-[180px]">
+                  <SelectValue placeholder="Select a gender" />
+                </SelectTrigger>
+                <SelectContent>
+                  <SelectGroup className="font-display">
+                    <SelectItem value="male">Male</SelectItem>
+                    <SelectItem value="female">Female</SelectItem>
+                  </SelectGroup>
+                </SelectContent>
+              </Select>
+            </div>
+          </div>
+          <div className="w-full">
+            <div className="flex flex-col w-full justify-center items-start gap-2">
+              <Label htmlFor="email" className="text-right">
+                Are you fasting ?
+              </Label>
+              <Select>
+                <SelectTrigger className="w-[180px]">
+                  <SelectValue placeholder="Select an answe" />
+                </SelectTrigger>
+                <SelectContent>
+                  <SelectGroup className="font-display">
+                    <SelectItem value="yet">Yes</SelectItem>
+                    <SelectItem value="no">No</SelectItem>
+                  </SelectGroup>
+                </SelectContent>
+              </Select>
+            </div>
+          </div>
+        
+          <div className="w-full">
+            <div className="flex flex-col w-full justify-center items-start gap-2">
               <Label htmlFor="comment" className="text-right">
                 Anything you would like to say
               </Label>
@@ -95,8 +143,8 @@ export function Register() {
         </div>
 
         <DialogFooter>
-          <Button variant="blue"  type="submit" className="mr-auto py-6">
-                Get your tickets
+          <Button variant="blue" type="submit" className="mr-auto py-6">
+            Get your tickets
           </Button>
         </DialogFooter>
       </DialogContent>

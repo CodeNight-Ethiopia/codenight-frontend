@@ -6,7 +6,9 @@ import Nav from "@/components/nav/Nav";
 import Image from "next/image";
 import PageHead from "@/components/PageHead";
 import Contributors from "@/components/Contributors";
+
 import { Button } from "@/components/ui/button";
+
 
 const HeroSection = () => (
   <section className="px-4 py-32 mx-auto max-w-7xl">

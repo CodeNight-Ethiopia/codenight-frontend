@@ -24,7 +24,7 @@ const FAQPage = () => {
         <section className="flex flex-col justify-start items-center mx-auto px-10">
           {FAQData.map((faq, idx) => {
             return (
-              <FAQSingleCard key={idx} title={faq.title} desc={faq.desc} />
+              <FAQSingleCard key={faq.id} title={faq.title} desc={faq.desc} />
             );
           })}
         </section>

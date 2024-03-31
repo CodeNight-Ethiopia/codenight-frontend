@@ -25,9 +25,13 @@ const Nav = () => {
   }, [fix]);
 
   return (
-    <div className={`sticky top-0 z-50 bg-white border-b border-gray-100`}>
+    <div className={"sticky·top-0·z-50·bg-white·border-b·border-gray-100"}>
       <div
+
+      
+
         className={` mx-auto sm:max-w-xl md:max-w-full lg:max-w-screen-xl lg:px-8 `}
+
       >
         <div className="flex p-6 md:items-center items-start flex-row md:justify-between justify-center">
           <Link
@@ -43,7 +47,7 @@ const Nav = () => {
           <ul className="items-center space-x-8 hidden md:flex">
             {NavigationMenuData.map((menu, idx) => {
               return (
-                <NavItem key={idx} link={menu.link}>
+                <NavItem key={menu.name} link={menu.link}>
                   {menu.name}
                 </NavItem>
               );
@@ -84,7 +88,9 @@ const Nav = () => {
               <ul className="list-none flex flex-col gap-2 flex-1 text-cyan-50">
                 {NavigationMenuData.map((menu, idx) => {
                   return (
+
                     <MobileNavItem key={idx} link={menu.link}>
+
                       {menu.name}
                     </MobileNavItem>
                   );

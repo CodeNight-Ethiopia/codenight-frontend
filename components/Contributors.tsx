@@ -31,13 +31,13 @@ const Contributors = () => {
         {contributors.map((contributor, idx) => {
           return (
             <Link
-              href={contributor.html_url}
-              key={idx}
+              href={(contributor as any).html_url}
+              key={(contributor as any).id}
               className="relative rounded-full overflow-hidden h-12 w-12 cursor-pointer"
             >
               <Image
-                src={contributor.avatar_url}
-                alt={contributor.login}
+                src={(contributor as any).avatar_url}
+                alt={(contributor as any).login}
                 height={50}
                 width={50}
               />

@@ -1,5 +1,3 @@
-import Head from "next/head";
-
 import hahucloud from "../assets/Image/hahucloud-logo.png";
 import Logo from "@/assets/Logo";
 import Nav from "@/components/nav/Nav";

@@ -28,11 +28,7 @@ const Nav = () => {
 
   return (
     <div className={"sticky·top-0·z-50·bg-white·border-b·border-gray-100"}>
-      <div
-        className={
-          "·mx-auto·sm:max-w-xl·md:max-w-full·lg:max-w-screen-xl·md:px-24·lg:px-8·"
-        }
-      >
+      <div className={` mx-auto sm:max-w-xl md:max-w-full lg:max-w-screen-xl lg:px-8 `}>
         <div className="flex p-6 md:items-center items-start flex-row md:justify-between justify-center">
           <Link
             href="/"
@@ -80,15 +76,17 @@ const Nav = () => {
               />
             )}
             <div
-              className={`${
-                toggle ? "flex" : "hidden"
-              } p-4 bg-indigo-500 absolute top-20 right-0 mx-4 my-2 min-w-[70px] rounded-xl sidebar`}
+              className={`${toggle ? "flex" : "hidden"
+                } p-4 bg-indigo-500 absolute top-20 right-0 mx-4 my-2 min-w-[70px] rounded-xl sidebar`}
             >
               <ul className="list-none flex flex-col gap-2 justify-end items-center flex-1 text-cyan-50">
                 {NavigationMenuData.map((menu, idx) => {
                   return (
                     <NavItem key={menu.name} link={menu.link}>
-                      {menu.name}
+
+                      <MobileNavItem key={idx} link={menu.link}>
+
+                        {menu.name}
                     </NavItem>
                   );
                 })}

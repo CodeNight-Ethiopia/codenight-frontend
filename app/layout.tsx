@@ -8,6 +8,16 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
+      <link
+				rel="preconnect"
+				href="https://cdn.fontshare.com"
+				crossOrigin="anonymous"
+				/>
+				<link
+				rel="stylesheet"
+				href="https://api.fontshare.com/v2/css?f[]=cabinet-grotesk@800,500,700&display=swap"
+				/>
+			
       <body>
         <main>
           <Nav />

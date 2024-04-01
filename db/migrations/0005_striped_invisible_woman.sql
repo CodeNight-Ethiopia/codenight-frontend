@@ -1,0 +1,1 @@
+ALTER TABLE "guests" RENAME COLUMN "fasting " TO "fasting";

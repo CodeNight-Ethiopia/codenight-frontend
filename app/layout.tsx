@@ -1,6 +1,9 @@
 import StickyBottomBanner from "@/components/StickyBottomBanner";
 import Nav from "@/components/nav/Nav";
+import { Toaster } from "@/components/ui/toaster"
+
 import "@/styles/globals.css";
+
 export default function RootLayout({
   children,
 }: {
@@ -24,6 +27,7 @@ export default function RootLayout({
           {children}
           <StickyBottomBanner />
         </main>
+        <Toaster />
       </body>
     </html>
   );

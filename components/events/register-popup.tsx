@@ -69,12 +69,16 @@ const RegisterSchema = z.object({
   profession: z.string({
     required_error: "Please select an options for your profession.",
   }),
+  other: z.string({
+    required_error: "Please select an options for your profession.",
+  }),
   comment: z.string().min(2, {
     message: "The comment should be more than 2 characters",
   }),
   phone: z.string().regex(PHONE_REGEX, {
     message: "Invalid phone number",
   }),
+
 });
 export function Register() {
   const [pending, startTransition] = React.useTransition();
@@ -99,7 +103,10 @@ export function Register() {
         data.email,
         data.gender,
         data.fasting,
-        data.comment
+        data.comment,
+        data.status , 
+        otherProfession ?  data.other : data.profession,
+
       )
         .then((res) => {
           toast({
@@ -416,12 +423,12 @@ export function Register() {
               {otherProfession && (
                 <div className="w-full">
                   <div className="flex flex-col w-full justify-center items-start gap-2">
-                    <Label htmlFor="email" className="text-right">
+                    <Label htmlFor="profession" className="text-right">
                       Profession ?
                     </Label>
                     <FormField
                       control={form.control}
-                      name="profession"
+                      name="other"
                       render={({ field }) => (
                         <FormItem className="w-full">
                           <FormControl>

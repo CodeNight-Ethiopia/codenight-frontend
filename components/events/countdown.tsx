@@ -47,8 +47,8 @@ const ShiftingCountdown = () => {
   };
 
   return (
-    <div className="p-4 bg-gradient-to-br from-transparent to-transparent  rounded-3xl ">
-      <div className="w-full max-w-full mx-auto flex items-center bg-">
+    <div className="p-4 bg-gradient-to-br from-transparent to-transparent  rounded-3xl overflow-hidden ">
+      <div className="w-full max-w-full mx-auto flex items-center bg- overflow-hidden">
         <CountdownItem num={remaining.days} text="days" />
         <CountdownItem num={remaining.hours} text="hours" />
         <CountdownItem num={remaining.minutes} text="minutes" /> 
@@ -60,7 +60,7 @@ const ShiftingCountdown = () => {
 
 const CountdownItem = ({ num, text }: { num: number; text: string }) => {
   return (
-    <div className="font-display w-[345px] h-20 md:h-full flex mx-10 flex-col gap-1 md:gap-2 items-center justify-center border-r-[1px] mb-0 z-20 border-slate-200">
+    <div className="font-display sm:w-[120px] md:w-[200px] lg:w-[345px] h-20 md:h-full flex sm:mx-0 md:mx-5 lg:mx-10 flex-col gap-1 md:gap-2 items-center justify-center border-r-[1px] mb-0 z-20 border-slate-200">
       <div className="w-full text-center relative overflow-hidden">
         <AnimatePresence mode="popLayout">
           <motion.span
@@ -69,14 +69,14 @@ const CountdownItem = ({ num, text }: { num: number; text: string }) => {
             animate={{ y: "0%" }}
             exit={{ y: "-100%" }}
             transition={{ ease: "backIn", duration: 0.75 }}
-            className="block text-2xl font-heading2 md:text-4xl mr-10 lg:text-6xl xl:text-[14rem] font-medium bg-gradient-to-tr from-blue-400 to-purple-400 bg-clip-text text-transparent"
+            className="block text-4xl font-heading2 md:text-5xl mr-10 lg:text-6xl xl:text-[14.5rem] font-medium bg-gradient-to-tr from-blue-400 to-purple-400 bg-clip-text text-transparent"
           >
             
             {num < 10 ? "0" + num : num} 
           </motion.span>
         </AnimatePresence>
       </div>
-      <span className="text-xs md:text-lg lg:text-2xl tracking-wide font-light font-heading text-black">
+      <span className="text-sm md:text-xl lg:text-3xl tracking-wide font-light font-heading text-black">
         {text}
       </span>
     </div>

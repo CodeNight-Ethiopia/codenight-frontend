@@ -40,6 +40,7 @@ import {
 } from "@/components/ui/form";
 import { Loader2 } from "lucide-react";
 import { registerDevs } from "@/actions/meetup";
+import { date } from "drizzle-orm/mysql-core";
 const GENDER_ENUMS = ["male", "female"];
 const FASTING_ENUMS = ["yes", "no"];
 const PHONE_REGEX = new RegExp(
@@ -66,12 +67,15 @@ const RegisterSchema = z.object({
   status: z.string({
     required_error: "Please select an options for your status.",
   }),
-  profession: z.string({
-    required_error: "Please select an options for your profession.",
-  }),
   other: z.string({
     required_error: "Please select an options for your profession.",
   }),
+
+  profession: z.string().optional(),  
+  // other: z.string({
+  //   required_error: "Please select an options for your profession.",
+  // }),
+
   comment: z.string().min(2, {
     message: "The comment should be more than 2 characters",
   }),
@@ -93,9 +97,12 @@ export function Register() {
       fasting: "",
       status: "",
       profession: "",
+      other: "",
     },
   });
+  const [selectedProfession , setSelectedProfession] = React.useState<string>('')
   const onHandleSubmit = (data: z.infer<typeof RegisterSchema>) => {
+    const professionSelected = !data.profession ? data.other! : data.profession
     startTransition(() => {
       registerDevs(
         data.firstName,
@@ -106,8 +113,7 @@ export function Register() {
         data.fasting,
         data.comment,
         data.status , 
-        otherProfession ?  data.other : data.profession,
-
+        !!selectedProfession.length ? selectedProfession : data.other,
       )
         .then((res) => {
           toast({
@@ -340,7 +346,7 @@ export function Register() {
                           >
                             <FormControl>
                               <SelectTrigger className="w-full">
-                                <SelectValue placeholder="Status" />
+                                <SelectValue placeholder="Select Status" />
                               </SelectTrigger>
                             </FormControl>
 
@@ -367,19 +373,23 @@ export function Register() {
                 </div>
                 <div className="w-full">
                   <div className="flex flex-col w-full justify-center items-start gap-2">
-                    <Label htmlFor="email" className="text-right">
-                      Profession ?
+                    <Label htmlFor="profession" className="text-right">
+                     Choose Profession ?
                     </Label>
                     <FormField
                       control={form.control}
                       name="profession"
                       render={({ field }) => (
                         <FormItem className="w-full">
-                          <Select
+                          <Select   
                             onValueChange={(val) => {
                               field.onChange()
                               if(val === 'other') {
                                 setOtherProfession(true)
+                                setSelectedProfession('') 
+                              }else {
+                                setOtherProfession(false)
+                                setSelectedProfession(val)
                               }
                             }}
                             defaultValue={field.value}
@@ -390,7 +400,7 @@ export function Register() {
                               </SelectTrigger>
                             </FormControl>
 
-                            <SelectContent>
+                            <SelectContent >
                               <SelectGroup className="font-display">
                                 <SelectItem value="web_dev">
                                   Web Development
@@ -401,14 +411,10 @@ export function Register() {
                                 <SelectItem value="game_dev">
                                   Game Development
                                 </SelectItem>
+
                                 <SelectItem
-                                  onClick={() => {
-                                    console.log('Clicked')
-                                    setOtherProfession(true)
-                                  }}
-                                  value="other"
-                                >
-                                  Other
+                                  value="other">
+                                      Other
                                 </SelectItem>
                               </SelectGroup>
                             </SelectContent>

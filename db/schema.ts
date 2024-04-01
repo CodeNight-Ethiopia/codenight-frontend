@@ -22,3 +22,8 @@ export var guests = pgTable("guests", {
   profession: text("profession"),
   
 });
+
+export var subscribers = pgTable("subscribers" , {
+  id: serial('id').primaryKey(),
+  email: text('email'),
+})

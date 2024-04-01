@@ -1,5 +1,5 @@
-// 'use server'
-'use server'
+"use server";
+
 
 import { db } from "@/db"
 import { guests } from "@/db/schema"

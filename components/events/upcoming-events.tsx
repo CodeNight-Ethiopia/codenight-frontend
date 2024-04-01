@@ -23,9 +23,9 @@ export function UpcomingEvent() {
               from Western Union.
             </p>
             <p>
-              At CodeNight Dev 2 Meetup you’ll learn about the latest dark patterns being
-              developed to trick even the smartest visitors, and you’ll learn
-              how to deploy them without ever being detected.
+              At CodeNight Dev 2 Meetup you’ll learn about the latest dark
+              patterns being developed to trick even the smartest visitors, and
+              you’ll learn how to deploy them without ever being detected.
             </p>
           </div>
           <Register />

@@ -17,5 +17,8 @@ export var guests = pgTable("guests", {
   email: text("email").unique(),
   gender: text("gender" ),
   fasting: text("fasting"),
-  comment: text('comment')
+  comment: text('comment'),
+  status: text("status"),
+  profession: text("profession"),
+  
 });

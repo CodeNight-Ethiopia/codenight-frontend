@@ -140,7 +140,7 @@ export function Register() {
           Get your tickets
         </Button>
       </DialogTrigger>
-      <DialogContent className="font-display sm:max-w-fit bg-gradient-to-tr from-indigo-100 via-indigo-50 to-indigo-100/50 px-10 pr-32">
+      <DialogContent className="font-display sm:max-w-fit bg-gradient-to-tr from-indigo-100 via-indigo-50 to-indigo-100/50 px-10 pr-20">
         <DialogHeader>
           <DialogTitle>
             <SectionHeading number="001">Register</SectionHeading>

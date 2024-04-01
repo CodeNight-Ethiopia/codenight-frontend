@@ -11,7 +11,7 @@ const CountDownTimerHeader = () => {
   const opacity = useTransform(scrollYProgress, [0, 0.5, 1], [1, 0.4, 0])
   return (
     <motion.div ref={divRef} style={{ opacity }} className="flex justify-start items-start my-10 mr-auto">
-      <h1 className="text-5xl font-bold tracking-tighter text-blue-600 sm:text-7xl mr-[-100px]">We are almost there...</h1>
+      <h1 className="text-5xl font-bold tracking-tighter text-blue-600 sm:text-7xl">We are almost there...</h1>
     </motion.div>
   )
 }

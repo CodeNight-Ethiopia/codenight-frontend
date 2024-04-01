@@ -38,7 +38,7 @@ import {
   FormLabel,
   FormMessage,
 } from "@/components/ui/form";
-import { Loader2 } from "lucide-react";
+import { Loader } from "lucide-react";
 import { registerDevs } from "@/actions/meetup";
 const GENDER_ENUMS = ["male", "female"];
 const FASTING_ENUMS = ["yes", "no"];
@@ -486,7 +486,7 @@ export function Register() {
                 type="submit"
                 className="mr-auto py-6"
               >
-                {pending && <Loader2 className="animate-spin w-4 h-4 mr-1" />}{" "}
+                {pending && <Loader className="animate-spin w-4 h-4 mr-1" />}{" "}
                 Get your tickets
               </Button>
             </DialogFooter>

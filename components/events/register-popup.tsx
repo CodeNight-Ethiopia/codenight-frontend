@@ -40,7 +40,6 @@ import {
 } from "@/components/ui/form";
 import { Loader2 } from "lucide-react";
 import { registerDevs } from "@/actions/meetup";
-import { date } from "drizzle-orm/mysql-core";
 const GENDER_ENUMS = ["male", "female"];
 const FASTING_ENUMS = ["yes", "no"];
 const PHONE_REGEX = new RegExp(
@@ -102,7 +101,6 @@ export function Register() {
   });
   const [selectedProfession , setSelectedProfession] = React.useState<string>('')
   const onHandleSubmit = (data: z.infer<typeof RegisterSchema>) => {
-    const professionSelected = !data.profession ? data.other! : data.profession
     startTransition(() => {
       registerDevs(
         data.firstName,
@@ -118,7 +116,7 @@ export function Register() {
         .then((res) => {
           toast({
             title: "Registered Successfully",
-            description: `Dear ${data.firstName} , you have successfully registered for CodeNight Dev 2 Meetup `,
+            description: `Dear ${data.firstName} , you have successfully registered for CodeNight Dev 2 Meetup. We will send you an email shortly`,
           });
         })
         .catch((err) => {

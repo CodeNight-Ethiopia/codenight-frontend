@@ -25,5 +25,5 @@ export var guests = pgTable("guests", {
 
 export var subscribers = pgTable("subscribers" , {
   id: serial('id').primaryKey(),
-  email: text('email'),
+  email: text('email').unique(),
 })

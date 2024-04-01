@@ -102,6 +102,7 @@ export function Register() {
         data.lastName,
         data.email,
         data.gender,
+        data.phone,
         data.fasting,
         data.comment,
         data.status , 

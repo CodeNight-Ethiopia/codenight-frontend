@@ -9,15 +9,18 @@ import { guests } from "@/db/schema"
 
 type Gender = "male" | "female" 
 type Fasting = "yes" | "no"
-export const registerDevs = async (firstName: string , lastName: string, email:string , gender:string, fasting:string , comment: string ) => {
+export const registerDevs = async (firstName: string , lastName: string, email:string , phone: string , gender:string, fasting:string , comment: string , status: string , profession: string ) => {
     const registered = await db.insert(guests).values({
        email: email,
        firstName:firstName,
        lastName:lastName,
-       phone:"212012121",
+       phone:phone,
        gender: gender,
        fasting: fasting,
-       comment: comment
+       comment: comment,
+       status: status,
+       profession: profession,
     })
+    return registered
     
 }

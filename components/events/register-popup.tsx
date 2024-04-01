@@ -331,7 +331,7 @@ export function Register() {
                 <div className="w-full">
                   <div className="flex flex-col w-full justify-center items-start gap-2">
                     <Label htmlFor="status" className="text-right">
-                      Which Discribes you the most?
+                      Status 
                     </Label>
                     <FormField
                       control={form.control}

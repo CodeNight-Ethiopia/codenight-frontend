@@ -158,7 +158,7 @@ export function Register() {
         <Form {...form}>
           <form onSubmit={form.handleSubmit(onHandleSubmit)}>
             <div className="grid gap-4 py-4 mr-auto w-full">
-              <div className="flex flex-col md:flex-row space-y-2 md:space-y-0 md:space-x-6  mb-4">
+              <div className="flex flex-col md:flex-row space-y-2 md:space-y-0 md:space-x-6 mb-2">
                 <div className="flex flex-col w-full justify-center items-start gap-2">
                   <Label htmlFor="firstname" className="text-right">
                     First Name
@@ -208,7 +208,7 @@ export function Register() {
                   />
                 </div>
               </div>
-              <div className="flex flex-col md:flex-row space-y-2 md:space-y-0 md:space-x-6  mb-4">
+              <div className="flex flex-col md:flex-row space-y-2 md:space-y-0 md:space-x-6 mb-2">
                 <div className="w-full">
                   <div className="flex flex-col w-full justify-center items-start gap-2">
                     <Label htmlFor="email" className="text-right">
@@ -260,7 +260,7 @@ export function Register() {
                 </div>
               </div>
 
-              <div className="flex flex-col md:flex-row space-y-2 md:space-y-0 md:space-x-6  mb-4">
+              <div className="flex flex-col md:flex-row space-y-2 md:space-y-0 md:space-x-6 mb-2">
                 <div className="w-full">
                   <div className="flex flex-col w-full justify-center items-start gap-2">
                     <Label htmlFor="gender" className="text-right">
@@ -329,7 +329,7 @@ export function Register() {
                   </div>
                 </div>
               </div>
-              <div className="flex flex-col md:flex-row space-y-2 md:space-y-0 md:space-x-6  mb-4">
+              <div className="flex flex-col md:flex-row space-y-2 md:space-y-0 md:space-x-6 mb-2">
                 <div className="w-full">
                   <div className="flex flex-col w-full justify-center items-start gap-2">
                     <Label htmlFor="status" className="text-right">

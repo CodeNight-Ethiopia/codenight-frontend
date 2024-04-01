@@ -10,7 +10,10 @@ import { Speakers } from "@/components/events/speakers";
 import { Sponsors } from "@/components/events/sponsors";
 import { Stats } from "@/components/events/stats";
 import { UpcomingEvent } from "@/components/events/upcoming-events";
-
+export const metadata = {
+  title: "CodeNight Events",
+  description: "Where we all gather and build the future"
+}
 const DevMeetupV2 = () => {
   return (
     <>

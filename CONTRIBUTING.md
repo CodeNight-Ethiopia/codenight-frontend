@@ -1,6 +1,6 @@
 # Contribution Guidelines
 
-Thank you for considering contributing to our Rome-based project! We welcome any and all contributions, including bug reports, feature requests, code changes, and documentation improvements. To ensure a smooth and efficient collaboration, please read and follow these guidelines before submitting your contribution.
+Thank you for considering contributing to our project! We welcome any and all contributions, including bug reports, feature requests, code changes, and documentation improvements. To ensure a smooth and efficient collaboration, please read and follow these guidelines before submitting your contribution.
 
 ## Getting Started
 
@@ -20,7 +20,7 @@ When making changes to the code, please keep the following in mind:
 1. Write clear and concise commit messages
 2. Follow the existing code style and conventions
 3. You code will be formatted using pre-commits before you commit any changes if you want to run it manually please run `pnpm run format:write`
-4. A linter will also run before every commit to ensure that your changes follow our code style if you want to perform manual check please run `pnpm run lint:next` and `pnpm run lint:rome`
+4. A linter will also run before every commit to ensure that your changes follow our code style if you want to perform manual check please run `pnpm run lint:next`
 5. Check that your changes type-check by running `pnpm run type:check`
 6. Update the documentation if necessary
 

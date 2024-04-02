@@ -1,3 +1,4 @@
+// @ts-nocheeck
 "use client";
 import Link from "next/link";
 import { useEffect, useState } from "react";
@@ -10,6 +11,7 @@ import MobileNavItem from "@/components/nav/MobileNavItem";
 import { NavigationMenuData } from "@/data";
 import { useParams, usePathname } from "next/navigation";
 import { cn } from "@/lib/utils";
+import NavItem from "./NavItem";
 
 const Nav = () => {
   const [toggle, setToggle] = useState(false);
@@ -84,7 +86,7 @@ const Nav = () => {
                   return (
                     <NavItem key={menu.name} link={menu.link}>
 
-                      <MobileNavItem key={idx} link={menu.link}>
+                      {/* <MobileNavItem key={idx} link={menu.link} /> */}
 
                         {menu.name}
                     </NavItem>

@@ -1,0 +1,1 @@
+ALTER TABLE "guests" ADD CONSTRAINT "guests_email_unique" UNIQUE("email");

@@ -9,12 +9,7 @@
     "test": "echo \"Error: no test specified\" && exit 1",
     "push:pg": "drizzle-kit push:pg",
     "generate:pg": "drizzle-kit generate:pg",
-    "format": "rome format .",
-    "format:write": "rome format . --write",
     "lint:next": "next lint",
-    "lint:rome": "rome check .",
-    "lint:rome:fix": "rome check . --apply",
-    "lint:rome:fix:unsafe": "rome check . --apply-suggested",
     "type:check": "tsc --noEmit"
   },
   "dependencies": {
@@ -37,12 +32,12 @@
     "lucide-react": "^0.363.0",
     "next": "14.1.4",
     "next-themes": "^0.2.1",
+    "postgres": "^3.4.3",
     "react": "18.2.0",
     "react-dom": "18.2.0",
     "react-hook-form": "^7.51.2",
     "tailwind-merge": "^2.2.2",
     "tailwindcss-animate": "^1.0.7",
-    "postgres": "^3.4.3",
     "zod": "^3.22.4"
   },
   "devDependencies": {
@@ -50,10 +45,9 @@
     "@types/react": "18.2.73",
     "@types/react-dom": "^18.0.11",
     "autoprefixer": "^10.4.14",
+    "drizzle-kit": "^0.20.9",
     "postcss": "^8.4.21",
-    "rome": "^11.0.0",
     "tailwindcss": "^3.3.1",
-    "typescript": "5.4.3",
-    "drizzle-kit": "^0.20.9"
+    "typescript": "5.4.3"
   }
 }

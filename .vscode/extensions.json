@@ -1,6 +1,5 @@
 {
   "recommendations": [
-    "rome.rome",
     "bradlc.vscode-tailwindcss",
     "dbaeumer.vscode-eslint",
     "vivaxy.vscode-conventional-commits"

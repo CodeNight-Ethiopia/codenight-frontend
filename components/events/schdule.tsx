@@ -22,7 +22,7 @@ interface Day {
 
 const schedule: Array<Day> = [
   {
-    date: 'April 14',
+    date: 'Morning',
     dateTime: '2022-04-04',
     summary:
       'Morning Event schedules.',
@@ -72,7 +72,7 @@ const schedule: Array<Day> = [
     ],
   },
   {
-    date: 'April 14',
+    date: 'AfterNoon',
     dateTime: '2022-04-05',
     summary:
       'AfterNoon Event Schedules.',
@@ -121,56 +121,56 @@ const schedule: Array<Day> = [
       },
     ],
   },
-  {
-    date: 'Post Event',
-    dateTime: '2022-04-06',
-    summary:
-      'Post Event Schedules.',
-    timeSlots: [
-      {
-        name: 'Andrew Greene',
-        description: 'Neuralink dark patterns',
-        start: '9:00AM',
-        end: '10:00AM',
-      },
-      {
-        name: 'Heather Terry',
-        description: 'DALL-E for passports',
-        start: '10:00AM',
-        end: '11:00AM',
-      },
-      {
-        name: 'Piers Wilkins',
-        description: 'Quantum password cracking',
-        start: '11:00AM',
-        end: '12:00PM',
-      },
-      {
-        name: 'Lunch',
-        description: null,
-        start: '12:00PM',
-        end: '1:00PM',
-      },
-      {
-        name: 'Gordon Sanderson',
-        description: 'SkyNet is coming',
-        start: '1:00PM',
-        end: '2:00PM',
-      },
-      {
-        name: 'Kimberly Parsons',
-        description: 'Dark patterns for the metaverse',
-        start: '2:00PM',
-        end: '3:00PM',
-      },
-      {
-        name: 'Richard Astley',
-        description: 'Knowing the game and playing it',
-        start: '3:00PM',
-        end: '4:00PM',
-      },
-    ],
-  },
+  // {
+  //   date: 'Post Event',
+  //   dateTime: '2022-04-06',
+  //   summary:
+  //     'Post Event Schedules.',
+  //   timeSlots: [
+  //     {
+  //       name: 'Andrew Greene',
+  //       description: 'Neuralink dark patterns',
+  //       start: '9:00AM',
+  //       end: '10:00AM',
+  //     },
+  //     {
+  //       name: 'Heather Terry',
+  //       description: 'DALL-E for passports',
+  //       start: '10:00AM',
+  //       end: '11:00AM',
+  //     },
+  //     {
+  //       name: 'Piers Wilkins',
+  //       description: 'Quantum password cracking',
+  //       start: '11:00AM',
+  //       end: '12:00PM',
+  //     },
+  //     {
+  //       name: 'Lunch',
+  //       description: null,
+  //       start: '12:00PM',
+  //       end: '1:00PM',
+  //     },
+  //     {
+  //       name: 'Gordon Sanderson',
+  //       description: 'SkyNet is coming',
+  //       start: '1:00PM',
+  //       end: '2:00PM',
+  //     },
+  //     {
+  //       name: 'Kimberly Parsons',
+  //       description: 'Dark patterns for the metaverse',
+  //       start: '2:00PM',
+  //       end: '3:00PM',
+  //     },
+  //     {
+  //       name: 'Richard Astley',
+  //       description: 'Knowing the game and playing it',
+  //       start: '3:00PM',
+  //       end: '4:00PM',
+  //     },
+  //   ],
+  // },
 ]
 
 function ScheduleTabbed() {
@@ -294,7 +294,7 @@ function TimeSlots({ day, className }: { day: Day; className?: string }) {
 
 function ScheduleStatic() {
   return (
-    <div className="hidden lg:grid lg:grid-cols-3 lg:gap-x-8">
+    <div className="hidden lg:grid lg:grid-cols-2 lg:gap-x-8">
       {schedule.map((day) => (
         <section key={day.dateTime}>
           <DaySummary day={day} />

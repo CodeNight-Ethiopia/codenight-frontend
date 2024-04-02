@@ -222,11 +222,14 @@ const StickyBottomBanner = () => (
     </div>
   </div>
 );
-
+export const metadata = {
+  title: "CodeNight",
+  description: "Community of 🇪🇹 developers to showcase their projects"
+}
 export default function Home() {
   return (
     <>
-      <PageHead />
+      {/* <PageHead /> */}
       <main>
         {/* <Nav /> */}
         <HeroSection />

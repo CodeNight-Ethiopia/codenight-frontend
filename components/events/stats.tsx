@@ -29,7 +29,7 @@ const stats = [
          
             <dl className="mt-16 relative  font-display grid grid-cols-1 gap-0.5 overflow-hidden rounded-2xl text-center sm:grid-cols-2 lg:grid-cols-4">
               {stats.map((stat) => (
-                <div key={stat.id} className="flex flex-col bg-gradient-to-tr from-blue-100/90 via-blue-50 to-blue-50/90 md:p-8 lg:p-10 xl:p-14">
+                <div key={stat.id} className="flex py-2 flex-col bg-gradient-to-tr from-blue-100/90 via-blue-50 to-blue-50/90 md:p-8 lg:p-10 xl:p-14">
                   <dt className="z-20  text-md font-semibold leading-6 text-blue-900">{stat.name}</dt>
                   <dd className="z-20  bg-gradient-to-tr from-blue-600 via-bluee-300 to-blue-300/80 bg-clip-text text-transparent order-first text-5xl font-semibold tracking-tight ">{stat.value}</dd>
                      <Image

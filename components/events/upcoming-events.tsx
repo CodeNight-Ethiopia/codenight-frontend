@@ -3,6 +3,7 @@ import { Button } from "@/components/ui/button";
 import { Wrapper } from "./wrapper";
 import { SectionHeading } from "./section-heading";
 import { Register } from "./register-popup";
+import Link from "next/link";
 
 export function UpcomingEvent() {
   return (
@@ -28,13 +29,15 @@ export function UpcomingEvent() {
               you’ll learn how to deploy them without ever being detected.
             </p>
           </div>
-          <Register />
-          {/* <Button
+          {/* <Register /> */}
+          <Link target="_blank" href={'https://forms.gle/FNYfdUTHHKvRm2zs7'}>
+          <Button
             variant={"blue"}
             className="mt-5 w-52 h-10 text-xl ml-auto font-bold py-8"
-          >
+            >
             Get your tickets
-          </Button> */}
+          </Button>
+            </Link>
           <dl className="mt-10 grid grid-cols-2 gap-x-10 gap-y-6 sm:mt-16 sm:gap-x-16 sm:gap-y-10 sm:text-center lg:auto-cols-auto lg:grid-flow-col lg:grid-cols-none lg:justify-start lg:text-left">
             {[
               ["Speakers", "18"],

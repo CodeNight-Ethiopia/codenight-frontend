@@ -1,5 +1,5 @@
-import Head from "next/head";
 import Logo from "@/assets/Logo";
+import Head from "next/head";
 import Link from "next/link";
 
 const PageHead = () => (

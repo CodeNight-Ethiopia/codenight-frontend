@@ -6,15 +6,15 @@ import SunIcon from "../../assets/icons/SunIcon";
 import MoonIcon from "../../assets/icons/MoonIcon";
 
 const ThemeButton = () => {
-  const { systemTheme, theme, setTheme } = useTheme();
-  const [mounted, setMounted] = useState(false);
+	const { systemTheme, theme, setTheme } = useTheme();
+	const [mounted, setMounted] = useState(false);
 
-  useEffect(() => {
-    setMounted(true);
-  }, []);
+	useEffect(() => {
+		setMounted(true);
+	}, []);
 
-  const currentTheme = theme === "system" ? systemTheme : theme;
-  if (!mounted) return null;
+	const currentTheme = theme === "system" ? systemTheme : theme;
+	if (!mounted) return null;
 
 	return (
 		<IconButton

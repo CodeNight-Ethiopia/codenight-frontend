@@ -14,7 +14,6 @@ repos:
           description: ''
           entry: eslint
           language: node
-          'types': [javascript]
           args: []
           require_serial: false
           additional_dependencies: ["eslint@8.57.0"]

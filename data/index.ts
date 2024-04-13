@@ -1,21 +1,26 @@
 export const NavigationMenuData = [
 	{
+		id: 1,
 		name: "Home",
 		link: "/",
 	},
 	{
+		id: 2,
 		name: "About Us",
 		link: "/about-us",
 	},
 	{
+		id: 3,
 		name: "Read",
 		link: "/read",
 	},
 	{
+		id: 4,
 		name: "FAQ's",
 		link: "/faq",
 	},
 	{
+		id: 5,
 		name: "Contact Us",
 		link: "/contact-us",
 	},

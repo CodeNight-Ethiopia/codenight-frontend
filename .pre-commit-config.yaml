@@ -9,13 +9,7 @@ repos:
         language: system
         stages: [commit]
 
-      - id: lint
-        name: Next-Lint
-        entry: npx
-        args: [next, "lint"]
-        language: system
-        stages: [commit]
-
+ 
       - id: run-tests
         name: Run Tests
         entry: npm

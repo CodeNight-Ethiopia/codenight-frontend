@@ -1,6 +1,6 @@
 import Link from "next/link";
 import React, { FC } from "react";
-import { ReactNode } from "react";
+import { type ReactNode } from "react";
 
 interface NavItemProps {
 	children: ReactNode;

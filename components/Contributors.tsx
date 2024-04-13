@@ -2,7 +2,7 @@
 import Image from "next/image";
 import Link from "next/link";
 import { useEffect, useState } from "react";
-import { IContributors } from "./IcontributorTypes";
+import { type IContributors } from "./IcontributorTypes";
 
 const Contributors = () => {
 	const [contributors, setContributors] = useState<IContributors[]>();
@@ -16,7 +16,7 @@ const Contributors = () => {
 				}
 				return response.json();
 			})
-			.then((data) => {
+			.then((data: IContributors[]) => {
 				setContributors(data);
 			})
 			.catch((error) => {
